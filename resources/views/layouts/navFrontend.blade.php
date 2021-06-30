@@ -1,5 +1,5 @@
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#F50057">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#FF639A">
     <!-- #EF7B8C -->
     <a class="navbar-brand text-white" href="{{url('/')}}">Pink Postcard</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
