@@ -29,9 +29,11 @@
             </form> -->
 
             <!-- Dashboard -->
+            @if(Auth::user()->hasRole('superadmin') || Auth::user()->hasRole('admin'))
             <li class="nav-item ml-3">
                 <a href="{{ url('/dashboard') }}" class="text-sm text-white">Dashboard</a>
             </li>
+            @endif
             <!-- Authentication -->
             <form method="POST" style="right: 2%; position: absolute;" action="{{ route('logout') }}">
                 @csrf
