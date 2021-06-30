@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('frontend.home');
 // });
+//Dashboard
 Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+
+//Postcards
+Route::get('/postcards', 'App\Http\Controllers\PostcardController@index')->name('postcard.index');
+Route::get('/postcard-preview', 'App\Http\Controllers\PostcardController@preview')->name('postcard.preview');
+
 
 //Auth Routes
 Route::group(['middleware' => ['auth']], function () {

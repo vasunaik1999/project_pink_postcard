@@ -16,10 +16,11 @@ Home | Pink Postcard
         <h2>Small contribution can change someone's life</h2>
         <br>
         <!-- <ul class="fa-ul pb-2" style="line-height:2;">
-            <li><span class="fa-li" style="color:#F50057;"><i class="fas fa-envelope"></i></span>Use this platform to request for your needs.</li>
-            <li><span class="fa-li" style="color:#F50057;"><i class="fas fa-envelope"></i></span>Use this platform to help those in need.</li>
-            <li><span class="fa-li" style="color:#F50057;"><i class="fas fa-envelope"></i></span>Use this platform to volunteer and help those affected by covid.</li>
+            <li><span class="fa-li" style="color:#FF639A;"><i class="fas fa-envelope"></i></span>Use this platform to request for your needs.</li>
+            <li><span class="fa-li" style="color:#FF639A;"><i class="fas fa-envelope"></i></span>Use this platform to help those in need.</li>
+            <li><span class="fa-li" style="color:#FF639A;"><i class="fas fa-envelope"></i></span>Use this platform to volunteer and help those affected by covid.</li>
         </ul> -->
+        <!-- #F50057 -->
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quia magnam illo, nemo esse corporis voluptatem odio, deleniti iste quisquam consequatur atque. In, vitae ducimus maiores quis similique dicta quos.</p>
         <a type="button" class="btn justify-content-center homeorderbtn" href="{{url('/postcards')}}">Buy Now</a>
     </div>
@@ -105,7 +106,7 @@ Home | Pink Postcard
                                         <textarea required name="message" class="form-control" id="message" rows="4" placeholder="Enter you message"></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn text-white mt-3" style="background-color:#F50057;">Submit</button>
+                                <button type="submit" class="btn text-white mt-3" style="background-color:#FF639A;">Submit</button>
                             </form>
                         </div>
                     </div>

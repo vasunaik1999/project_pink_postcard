@@ -11,12 +11,14 @@
                 <a class="text-white" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ml-3">
-                <a class="text-white" href="{{url('/gallery')}}">Gallery</a>
-            </li>
-            <li class="nav-item ml-3">
                 <a class="text-white" href="{{url('/postcards')}}">Postcards</a>
             </li>
-
+            <li class="nav-item ml-3">
+                <a class="text-white" href="{{url('/aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="text-white" href="{{url('/aboutus')}}">Contact Us</a>
+            </li>
             @if (Route::has('login'))
             @auth
             <!-- Authentication -->
