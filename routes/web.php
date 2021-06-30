@@ -13,16 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
+Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
 
 //Auth Routes
 Route::group(['middleware' => ['auth']], function () {
+});
+
+//ADMIN && SUPERADMIN ROUTES
+Route::group(['middleware' => ['auth', 'role:admin|superadmin']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
 });
 
