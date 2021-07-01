@@ -31,6 +31,13 @@ Route::group(['middleware' => ['auth']], function () {
 //ADMIN && SUPERADMIN ROUTES
 Route::group(['middleware' => ['auth', 'role:admin|superadmin']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+
+    //Postcard
+    Route::get('/dashboard/postcards-view', 'App\Http\Controllers\PostcardController@view')->name('postcard.view');
+    Route::get('/dashboard/postcard-create', 'App\Http\Controllers\PostcardController@create')->name('postcard.create');
+    Route::post('/dashboard/postcard-store', 'App\Http\Controllers\PostcardController@store')->name('postcard.store');
+    Route::get('/dashboard/postcard-edit/{postcard}', 'App\Http\Controllers\PostcardController@edit')->name('postcard.edit');
+    Route::put('/dashboard/postcard-update/{postcard}', 'App\Http\Controllers\PostcardController@update');
 });
 
 //User Routes
