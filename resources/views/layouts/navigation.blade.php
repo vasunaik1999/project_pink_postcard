@@ -17,7 +17,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('postcard.view')" :active="request()->routeIs('postcard.create')">
+                    <x-nav-link :href="route('postcard.view')" :active="request()->routeIs('postcard.view')">
                         {{ __('Postcards') }}
                     </x-nav-link>
                 </div>
@@ -70,7 +70,7 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('postcard.create')" :active="request()->routeIs('postcard.create')">
+            <x-responsive-nav-link :href="route('postcard.view')" :active="request()->routeIs('postcard.view')">
                 {{ __('Postcards') }}
             </x-responsive-nav-link>
         </div>
