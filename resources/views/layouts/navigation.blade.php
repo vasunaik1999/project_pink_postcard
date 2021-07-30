@@ -21,6 +21,12 @@
                         {{ __('Postcards') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('contactform.index')" :active="request()->routeIs('contactform.index')">
+                        {{ __('Contact Responses') }}
+                    </x-nav-link>
+                </div>
+
             </div>
 
             <!-- Settings Dropdown -->

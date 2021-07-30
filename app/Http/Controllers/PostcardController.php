@@ -10,12 +10,15 @@ class PostcardController extends Controller
 {
     public function index()
     {
-        return view('frontend.postcard.postcards');
+        $postcards = Postcard::where('status', '=', '1')->get();
+        //dd($postcards);
+        return view('frontend.postcard.postcards', compact('postcards'));
     }
 
-    public function preview()
+    public function preview(Postcard $postcard)
     {
-        return view('frontend.postcard.previewPostcard');
+        //dd($postcard);
+        return view('frontend.postcard.previewPostcard', compact('postcard'));
     }
 
     public function view()

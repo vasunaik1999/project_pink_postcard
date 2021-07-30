@@ -79,7 +79,7 @@ Home | Pink Postcard
                     @endif
                     <div class="card" style="background-color: #f6f6f6;">
                         <div class="card-body">
-                            <form method="post" action="">
+                            <form method="post" action="{{route('contactform.store')}}">
                                 @csrf
                                 <div class="row">
                                     <input type="hidden" name="user_id" @auth value="{{Auth::user()->id}}" @endauth>

@@ -6,13 +6,35 @@ Postcards | Pink Postcard
 
 @section('content')
 
+<style>
+    @media (max-width: 767.98px) {
+        .preview-image {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .preview-image {
+            width: 50%;
+        }
+    }
+</style>
+
 <div class="card" style="top: 40px;">
     <div class="card-body">
 
         <!-- Preview Image -->
         <div class="row">
             <div class="col mx-auto d-flex justify-content-center">
-                <img src="{{asset('img/pc1.jpeg')}}" alt="" class="" style="width: 50%;">
+                <img src="{{asset('uploads/postcards/'.$postcard->image)}}" alt="" class="preview-image" id="preview-image">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="my-1"><strong>Price : </strong><span>80₹</span></p>
+                <p class="my-1"><strong>Category : </strong><span>{{$postcard->category}}</span></p>
+                <p class="my-1"><strong>Caption : </strong><span>{{$postcard->caption}}</span></p>
+                <p class="my-1"><strong>Photograph By : </strong><span>{{$postcard->photograph_by}}</span></p>
             </div>
         </div>
     </div>

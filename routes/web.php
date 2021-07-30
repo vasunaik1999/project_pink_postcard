@@ -19,10 +19,12 @@ use Illuminate\Support\Facades\Route;
 //Dashboard
 Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
 
+//Contact Form
+Route::post('/contactform/submit', 'App\Http\Controllers\ContactFormController@store')->name('contactform.store');
+
 //Postcards
 Route::get('/postcards', 'App\Http\Controllers\PostcardController@index')->name('postcard.index');
-Route::get('/postcard-preview', 'App\Http\Controllers\PostcardController@preview')->name('postcard.preview');
-
+Route::get('/postcard-preview/{postcard}', 'App\Http\Controllers\PostcardController@preview')->name('postcard.preview');
 
 //Auth Routes
 Route::group(['middleware' => ['auth']], function () {
@@ -38,6 +40,10 @@ Route::group(['middleware' => ['auth', 'role:admin|superadmin']], function () {
     Route::post('/dashboard/postcard-store', 'App\Http\Controllers\PostcardController@store')->name('postcard.store');
     Route::get('/dashboard/postcard-edit/{postcard}', 'App\Http\Controllers\PostcardController@edit')->name('postcard.edit');
     Route::put('/dashboard/postcard-update/{postcard}', 'App\Http\Controllers\PostcardController@update');
+
+    //Contact form
+    Route::get('/dashboard/contactform-responses', 'App\Http\Controllers\ContactFormController@index')->name('contactform.index');
+    Route::post('/dashboard/contactform-responses/status', 'App\Http\Controllers\ContactFormController@updatestatus')->name('contactform.update.status');
 });
 
 //User Routes
