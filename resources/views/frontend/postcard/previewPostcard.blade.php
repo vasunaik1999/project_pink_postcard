@@ -30,8 +30,8 @@ Postcards | Pink Postcard
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col">
-                <p class="my-1"><strong>Price : </strong><span>80₹</span></p>
+            <div class="col mt-2">
+                <p class="my-1"><strong>Price : </strong><span>Rs. 80/-</span></p>
                 <p class="my-1"><strong>Category : </strong><span>{{$postcard->category}}</span></p>
                 <p class="my-1"><strong>Caption : </strong><span>{{$postcard->caption}}</span></p>
                 <p class="my-1"><strong>Photograph By : </strong><span>{{$postcard->photograph_by}}</span></p>
@@ -43,7 +43,26 @@ Postcards | Pink Postcard
 <!-- Buy Now -->
 <div class="card mt-5">
     <div class="card-body">
-        <form action="">
+        @if (session('status'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        <form method="post" action="{{route('order.store')}}">
+            @csrf
+            <input type="hidden" name="postcard_id" value="{{$postcard->id}}">
             <div class="row">
                 <div class="col">
                     <h6 for="order_type"><strong>Delivery Type</strong></h6>
@@ -78,16 +97,16 @@ Postcards | Pink Postcard
                         <input type="text" class="form-control rounded" id="card_to" placeholder="Enter receiver name..." name="card_to">
                     </div>
                     <div class="col-md-4 form-group">
-                        <label for="pincode">Receiver's Pincode</label>
-                        <input required type="number" class="form-control rounded" id="pincode" placeholder="Enter Receiver's Pincode..." name="pincode">
+                        <label for="pincode1">Receiver's Pincode</label>
+                        <input type="number" class="form-control rounded" id="pincode1" placeholder="Enter Receiver's Pincode..." name="pincode1">
                     </div>
                     <div class="col-md-12 form-group">
-                        <label for="address">Full Address</label>
-                        <textarea name="address" id="address" rows="2" class="form-control" placeholder="Full Address"></textarea>
+                        <label for="address1">Full Address</label>
+                        <textarea name="address1" id="address1" rows="2" class="form-control" placeholder="Full Address"></textarea>
                     </div>
                     <div class="col-md-12 form-group">
-                        <label for="message">Message (If any)</label>
-                        <textarea name="message" id="message" rows="3" class="form-control" placeholder="Message to send"></textarea>
+                        <label for="message1">Message (If any)</label>
+                        <textarea name="message1" id="message1" rows="3" class="form-control" placeholder="Message to send"></textarea>
                     </div>
                 </div>
             </div>
@@ -97,16 +116,16 @@ Postcards | Pink Postcard
                 <h6 class="my-2"><strong>Receive Yourself</strong></h6>
                 <div class="row mt-4">
                     <div class="col-md-4 form-group">
-                        <label for="name">Name</label>
-                        <input required type="text" class="form-control rounded" id="name" placeholder="Enter Full Name..." name="name">
+                        <label for="name2">Name</label>
+                        <input type="text" class="form-control rounded" id="name2" placeholder="Enter Full Name..." name="name2">
                     </div>
                     <div class="col-md-4 form-group">
-                        <label for="pincode">Pincode</label>
-                        <input required type="number" class="form-control rounded" id="pincode" placeholder="Enter Pincode..." name="pincode">
+                        <label for="pincode2">Pincode</label>
+                        <input type="number" class="form-control rounded" id="pincode2" placeholder="Enter Pincode..." name="pincode2">
                     </div>
                     <div class="col-md-12 form-group">
-                        <label for="address">Full Address</label>
-                        <textarea name="address" id="address" rows="2" class="form-control"></textarea>
+                        <label for="address2">Full Address</label>
+                        <textarea name="address2" id="address2" rows="2" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -116,8 +135,8 @@ Postcards | Pink Postcard
                 <h6 class="my-2"><strong>Pick up from</strong></h6>
                 <p class="mt-2">Pick up from XYZ Place, Kindly contact xxxx99xx99 or xxx@gmail.com</p>
                 <div class="col-md-4 form-group">
-                    <label for="name">Name</label>
-                    <input required type="text" class="form-control rounded" id="name" placeholder="Enter Full Name..." name="name">
+                    <label for="name3">Name</label>
+                    <input type="text" class="form-control rounded" id="name3" placeholder="Enter Full Name..." name="name3">
                 </div>
             </div>
 
@@ -128,6 +147,7 @@ Postcards | Pink Postcard
                     <label for="name">Full Name</label>
                     <input required type="text" class="form-control rounded" id="name" placeholder="Enter Full Name..." name="name">
                 </div> -->
+                <input type="hidden" name="postcard_id" id="postcard_id" value="{{$postcard->id}}">
                 <div class="col-md-4 form-group">
                     <label for="phone">Phone Number</label>
                     <input required type="number" class="form-control rounded" id="phone" placeholder="Enter Phone No..." name="phone">

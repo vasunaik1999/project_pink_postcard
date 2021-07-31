@@ -28,6 +28,8 @@ Route::get('/postcard-preview/{postcard}', 'App\Http\Controllers\PostcardControl
 
 //Auth Routes
 Route::group(['middleware' => ['auth']], function () {
+    Route::post('/payment', 'App\Http\Controllers\OrderController@store')->name('order.store');
+    //Route::get('/payment-details', 'App\Http\Controllers\OrderController@paymentDetails')->name('order.paymentDetails');
 });
 
 //ADMIN && SUPERADMIN ROUTES
@@ -44,6 +46,10 @@ Route::group(['middleware' => ['auth', 'role:admin|superadmin']], function () {
     //Contact form
     Route::get('/dashboard/contactform-responses', 'App\Http\Controllers\ContactFormController@index')->name('contactform.index');
     Route::post('/dashboard/contactform-responses/status', 'App\Http\Controllers\ContactFormController@updatestatus')->name('contactform.update.status');
+
+    //Orders
+    Route::get('/dashboard/orders', 'App\Http\Controllers\OrderController@index')->name('order.index');
+    Route::post('/dashboard/orders/updateStatus', 'App\Http\Controllers\OrderController@updateStatus')->name('order.updateStatus');
 });
 
 //User Routes

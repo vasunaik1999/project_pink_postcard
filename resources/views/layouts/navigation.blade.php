@@ -26,6 +26,11 @@
                         {{ __('Contact Responses') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('order.index')" :active="request()->routeIs('order.index')">
+                        {{ __('Orders') }}
+                    </x-nav-link>
+                </div>
 
             </div>
 
@@ -78,6 +83,12 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('postcard.view')" :active="request()->routeIs('postcard.view')">
                 {{ __('Postcards') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('contactform.index')" :active="request()->routeIs('contactform.index')">
+                {{ __('Contact Responses') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('order.index')" :active="request()->routeIs('order.index')">
+                {{ __('Orders') }}
             </x-responsive-nav-link>
         </div>
 
