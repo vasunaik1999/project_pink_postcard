@@ -31,7 +31,6 @@
             </form>
         </div>
     </x-auth-card>
-    <<<<<<< HEAD </x-guest-layout>
-        =======
-</x-guest-layout>
->>>>>>> 11a4cfd21231e9ffb07488a700f67b0d8bbcaa5f
+    <!--</x-guest-layout>
+=======
+</x-guest-layout>-->
