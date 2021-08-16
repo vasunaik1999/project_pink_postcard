@@ -12,7 +12,7 @@ Home | Pink Postcard
         <img style="max-height:70vh; width:60vw;" src="<?php echo asset('img/home.svg') ?>" alt="">
     </div>
     <div class="col-lg-4 col-md-12 mb-5">
-        <h1>Pink Postcard</h1>
+        <h1>Pink Postcards</h1>
         <h2>Small contribution can change someone's life</h2>
         <br>
         <!-- <ul class="fa-ul pb-2" style="line-height:2;">
@@ -21,7 +21,7 @@ Home | Pink Postcard
             <li><span class="fa-li" style="color:#FF639A;"><i class="fas fa-envelope"></i></span>Use this platform to volunteer and help those affected by covid.</li>
         </ul> -->
         <!-- #F50057 -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quia magnam illo, nemo esse corporis voluptatem odio, deleniti iste quisquam consequatur atque. In, vitae ducimus maiores quis similique dicta quos.</p>
+        <p>A first of its kind community based initiative to help the digital generation experience the joy of sending and receiving postcards. All this, while contributing towards helping the needy students be able to afford the books they require.</p>
         <a type="button" class="btn justify-content-center homeorderbtn" href="{{url('/postcards')}}">Buy Now</a>
     </div>
 </header>
@@ -35,12 +35,13 @@ Home | Pink Postcard
 
             <div class="section-title">
                 <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti neque saepe dolorem minus quasi temporibus pariatur ex doloribus delectus perferendis illo. Placeat quasi eligendi aperiam sint nobis molestias sequi.
-                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eum doloribus, magnam, harum reiciendis ipsam facilis voluptas delectus minus laborum, iure earum odit recusandae porro alias aperiam dolorem sint. Rem!
+                <p>
+                    The initiative revolves around narrating interesting stories from India, through pictures.
+                    Each postcard is valued at a nominal rate of Rs.80 to make it extremely affordable. The funds collected, minus the cost of printing and posting, will be directed towards a cause. The cause is to ensure accessibility to books for those who aren't as privileged.
                 </p>
             </div>
 
-            <div class="row mt-2">
+            <!--<div class="row mt-2">
                 <div class="col-lg-4 col-md-6 icon-box">
                     <h4 class="title"><a href="{{url('/')}}">Lorem</a></h4>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus praesentium hic voluptas qui optio asperiores voluptatum voluptatibus assumenda? Possimus, distinctio ipsa. Perferendis optio, possimus nostrum alias tenetur veniam temporibus? </p>
@@ -55,7 +56,7 @@ Home | Pink Postcard
                     <h4 class="title"><a href="mailto:help.goa.breathe@gmail.com">Lorem</a></h4>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quos cum dolores hic odio, at assumenda veniam blanditiis harum voluptatem. Quia dolorem atque eligendi nam voluptas veritatis ipsum sint maxime.</a> !! </p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section><!-- End About Us Section -->

@@ -10,7 +10,7 @@ Postcards | Pink Postcard
     <div class="card-body">
         <div class="row">
             @foreach($postcards as $p)
-            <div class="col-md-4">
+            <div class="col-md-4 mt-2">
                 <div class="card" style="height: 100%;">
                     <div class="card-body">
                         <img src="{{asset('uploads/postcards/'.$p->image)}}" alt="" style="width:100%;">
