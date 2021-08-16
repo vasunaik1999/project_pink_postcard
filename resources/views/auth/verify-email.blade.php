@@ -1,7 +1,6 @@
 <x-guest-layout>
     <x-auth-card>
 
-
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
         </div>
@@ -32,4 +31,7 @@
             </form>
         </div>
     </x-auth-card>
+    <<<<<<< HEAD </x-guest-layout>
+        =======
 </x-guest-layout>
+>>>>>>> 11a4cfd21231e9ffb07488a700f67b0d8bbcaa5f

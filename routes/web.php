@@ -58,7 +58,6 @@ Route::group(['middleware' => ['auth', 'role:admin|superadmin']], function () {
 //User Routes
 Route::group(['middleware' => ['auth', 'role:user']], function () {
     // Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-
 });
 
 require __DIR__ . '/auth.php';
