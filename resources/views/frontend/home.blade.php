@@ -39,6 +39,7 @@ Home | Pink Postcard
                     The initiative revolves around narrating interesting stories from India, through pictures.
                     Each postcard is valued at a nominal rate of Rs.80 to make it extremely affordable. The funds collected, minus the cost of printing and posting, will be directed towards a cause. The cause is to ensure accessibility to books for those who aren't as privileged.
                 </p>
+                <p>We work with contributors, photographers and storytellers who are willing to be a part of this non-profit initiative.</p>
             </div>
 
             <!--<div class="row mt-2">
