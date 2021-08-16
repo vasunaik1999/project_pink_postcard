@@ -17,7 +17,7 @@ Order Now | Pink Postcards
                 <img src="{{asset('uploads/postcards/'.$postcard->image)}}" style="width: 100%;" alt="">
             </div>
             <div class="offset-1 col-md-6">
-                <h5>Order Detials</h5>
+                <h5 class="mt-md-0 mt-4">Order Detials</h5>
                 @if($order->type == "Send to someone")
                 <p><strong>Phone No.:</strong> {{$order->phone}}</p>
                 <p><strong>Email:</strong> {{$order->email}} </p>
@@ -44,6 +44,10 @@ Order Now | Pink Postcards
         <div class="row mt-4">
             <div class="col">
                 <h4>Scan this QR code to pay.</h4>
+
+                <div class="d-flex justify-content-center">
+                    <img class="mx-auto" src="{{asset('/img/QR.jpg')}}" width="200px" alt="">
+                </div>
 
                 <p><strong>Note: After Successfull payment, order status will be marked as "Confirmed". This may take upto 24hours. If any query then please contact us.</strong></p>
             </div>
